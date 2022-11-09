@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <title>MAT-HUB</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navlist">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#About">ABOUT US</a></li>
+            <li><a href="#Reg">REGISTRATION/LOGIN</a></li>
+            <li><a href="#Contact">CONTACT</a></li>
+            <li><a href="#Order Now">ORDER NOW</a></li>
+            <li><a href="Track Order">TRACK YOUR ORDER </a></li>
+        </ul>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text1">
+                    Welcome </p>
+                <p class="text2">
+                    MAT-HUB
+                </p>
+                <p class=" text3">
+                    MATERIALS HUB
+                </p>
+                <button class="btn btn-order">ORDER NOW</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="Slideshow">
+        <center>
+        <div class="slideshow">
+            <img class="slides" src="img/registration.svg" alt="registration" style="width: 50%">
+            <p class="text">
+            <h2>01.REGISTRATION</h2><br>
+            General Consumer needs to register by providing the basic information like Mobile number or email id
+            </p>
+        </div>
+        <div class=" slideshow">
+            <img class="slides" src="img/onlinebooking.svg" alt="booking" style="width: 50%">
+            <p class="text">
+            <h2>02.ONLINE BOOKING</h2><br>
+            Registered consumer needS to login with credentials for online booking.
+            Search the delivery address through Google map and should fill the mandatory details like district, Mandal,
+            Ward for Door Delivery.
+            Vehicle Type, Quantity, Reach/ Depot selection and delivery location to be mentioned and confirmed before
+            proceeding to secured payment Gateway.
+            </p>
+        </div>
+        <div class="slideshow">
+            <img class="slides" src="img/onlinepayment.svg" alt="payment" style="width: 50%">
+            <p class="text">
+            <h2>03.ONLINE PAYMENTS</h2><br>
+            Based on the delivery location confirmation, Consumer can complete the payment process of Sand and
+            Transportation Cost through the portal by selecting payment methods (Debit/ Credit Cards/ Net Banking/ UPI
+            etc.) Once payment is processed, order receipt will be generated.
+            </p>
+        </div>
+        <div class="slideshow">
+            <img class="slides" src="img/sandloading.svg" alt="loading" style="width: 45%">
+            <p class="text">
+            <h2>04.MATERIALS LOADING</h2><br>
+            Our In-charge at Reach/ Depot will verify the loaded quantity for the vehicle and enable GPS navigation
+            will be enabled to the consumer for further tracking. Consumer will receive Kata-Slip, Invoice, and Sand way
+            Bill at time of Sand Delivery.
+            </p>
+        </div>
+        <div class="slideshow">
+            <img class="slides" src="img/ordertracking.svg" alt="tracking" style="width: 65%">
+            <p class="text">
+            <h2>05.ORDER TRACKING</h2><br>
+            Consumers will be notified about dispatch and delivery status for orders booked. Consumer can track the
+            order through our web portal.
+            </p>
+        </div>
+
+        <div class="slideshow">
+            <img class="slides" src="img/doordelivery.svg" alt="Delivery" style="width: 50%">
+            <p class="text">
+            <h2>06.DOOR DELIVERY</h2><br>
+            Dispatch will be processed by us to the delivery location specified by the consumer only. Consumer need to
+            confirm the receipt of delivery of sand through automated IVRS call received by the consumer after delivery.
+            NO EXTRA charge will be collected from the Consumer after successful Delivery.
+            </p>
+        </div>
+    </center>
+    <center>
+        <button class="btn btn-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="btn btn-right" onclick="plusDivs(1)">&#10095;</button>
+    </center>
+    </section>
+
+    <section class="Final">
+
+        
+    </section>
+
+</body>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    };
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slideshow");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+</script>
+
+</html>
